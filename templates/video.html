@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}Videos{% endblock title %}
+
+{% block body %} 
+<div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-2">
+        {% for vids in vids %}
+        <div class="col my-4">
+          <div class="card shadow-sm">
+            
+            <video controls="controls" src={{vids.video.url}} class="img-fluied float-end" alt="...">
+            
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      
+    </div>
+  </div>
+</div>
+</div>
+{% endblock body %}
